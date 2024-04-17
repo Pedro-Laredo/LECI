@@ -1,0 +1,114 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/pedro/LSD/aula01/parte2/simulation/qsim
+T_opt
+!s110 1708427899
+VdB?7XaYN1Elk5^AM[zHlg2
+04 20 13 work and2gate_vhd_vec_tst and2gate_arch 1
+=1-e8fb1ca23487-65d48a7b-ab-3930
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+R1
+Eand2gate
+Z2 w1708427948
+Z3 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z4 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 gn]m8U<PzXZH32IDQ4:hj3
+Z5 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z8 DPx10 cycloneive 21 cycloneive_components 0 22 cSe5`^NYM;IRV3WNS^Q7a2
+!i122 4
+R1
+Z9 8VHDLDemo.vho
+Z10 FVHDLDemo.vho
+l0
+L35 1
+V^Y_1]L^[0@[<A9HXkbJ790
+!s100 ;`i3lc3I2II_zPH32_?c52
+Z11 OL;C;2021.2;73
+32
+Z12 !s110 1708427948
+!i10b 1
+Z13 !s108 1708427948.000000
+Z14 !s90 -work|work|VHDLDemo.vho|
+Z15 !s107 VHDLDemo.vho|
+!i113 0
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 8 and2gate 0 22 ^Y_1]L^[0@[<A9HXkbJ790
+!i122 4
+l61
+L43 74
+VGLWM5cXI_ZdWWN?;KiFKT0
+!s100 ;;O72JmVjaGjnceNBn^[22
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+R17
+Eand2gate_vhd_vec_tst
+Z18 w1708427947
+R6
+R7
+!i122 5
+R1
+Z19 8Waveform.vwf.vht
+Z20 FWaveform.vwf.vht
+l0
+L32 1
+V[hOO8Xfh]f_cJLj3Uz]Sb1
+!s100 Z@L2aU@`B2`b0MJMX3Bez2
+R11
+32
+R12
+!i10b 1
+R13
+Z21 !s90 -work|work|Waveform.vwf.vht|
+Z22 !s107 Waveform.vwf.vht|
+!i113 0
+R16
+R17
+Aand2gate_arch
+R6
+R7
+Z23 DEx4 work 20 and2gate_vhd_vec_tst 0 22 [hOO8Xfh]f_cJLj3Uz]Sb1
+!i122 5
+l47
+Z24 L34 48
+Z25 VR1ZmHRLIJTNGnYE^]Mboe1
+Z26 !s100 0HBna=<e:W0LQB?f[=hJ<1
+R11
+32
+R12
+!i10b 1
+R13
+R21
+R22
+!i113 0
+R16
+R17

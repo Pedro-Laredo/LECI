@@ -1,0 +1,31 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity FreqDivider_Demo is
+    Port (
+        clkIn : in STD_LOGIC;
+        clkOut : out STD_LOGIC
+    );
+end FreqDivider_Demo;
+
+architecture Behavioral of FreqDivider_Demo is
+
+    constant k_value : unsigned(31 downto 0) := x"017D7840"; -- 25x10^6
+
+    signal divider_output : STD_LOGIC;
+
+begin
+
+    -- Instanciando o divisor de frequência
+    Divisor : entity work.FreqDivider
+        port map (
+            clk => clkIn,
+            k => k_value,
+            clk_div => divider_output
+        );
+
+    -- Conectando a saída do divisor ao LEDR
+    clkOut <= divider_output;
+
+end Behavioral;

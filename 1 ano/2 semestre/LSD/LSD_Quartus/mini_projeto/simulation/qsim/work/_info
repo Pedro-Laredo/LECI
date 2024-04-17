@@ -1,0 +1,112 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/pedro/LSD/mini_projeto/simulation/qsim
+T_opt
+!s110 1713255141
+Vd7VdahYCgO:OSeL:_LaGG2
+04 19 12 work decoder_vhd_vec_tst decoder_arch 1
+=1-e8fb1ca23487-661e32e4-295-1044
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Edecoder
+Z1 w1713255137
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 gn]m8U<PzXZH32IDQ4:hj3
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 cSe5`^NYM;IRV3WNS^Q7a2
+!i122 0
+R0
+Z8 8projeto.vho
+Z9 Fprojeto.vho
+l0
+L35 1
+VmA3PVUhMOczmZi?[9ZoA_1
+!s100 PeOfUlPdYeLThKF]8ghPe1
+Z10 OL;C;2021.2;73
+32
+Z11 !s110 1713255139
+!i10b 1
+Z12 !s108 1713255139.000000
+Z13 !s90 -work|work|projeto.vho|
+Z14 !s107 projeto.vho|
+!i113 0
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 7 decoder 0 22 mA3PVUhMOczmZi?[9ZoA_1
+!i122 0
+l66
+L42 161
+VK`dALen2>?<^IE6]in@]X1
+!s100 j8W_ZA<YS5TGzUP:lZG>Q2
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 0
+R15
+R16
+Edecoder_vhd_vec_tst
+R1
+R5
+R6
+!i122 1
+R0
+Z17 8Waveform.vwf.vht
+Z18 FWaveform.vwf.vht
+l0
+L32 1
+VUC=8cP?2BnEdJL9`]A01J0
+!s100 XI^0T5R[M5AaRm62UTPH12
+R10
+32
+R11
+!i10b 1
+R12
+Z19 !s90 -work|work|Waveform.vwf.vht|
+Z20 !s107 Waveform.vwf.vht|
+!i113 0
+R15
+R16
+Adecoder_arch
+R5
+R6
+DEx4 work 19 decoder_vhd_vec_tst 0 22 UC=8cP?2BnEdJL9`]A01J0
+!i122 1
+l45
+L34 47
+VM4RBDS[Ze_T<GEgeS62P90
+!s100 fnH7:zXTbRf[;:hc?lK[i3
+R10
+32
+R11
+!i10b 1
+R12
+R19
+R20
+!i113 0
+R15
+R16
