@@ -1,0 +1,84 @@
+{
+ "stats": [
+  {
+   "time": 1712579491.2312603,
+   "cpu": 1.1,
+   "network": {
+    "bytes_sent": 55986184,
+    "bytes_recv": 1584533502
+   }
+  },
+  {
+   "time": 1712579492.2327006,
+   "cpu": 0.4,
+   "network": {
+    "bytes_sent": 55986673,
+    "bytes_recv": 1584533710
+   }
+  },
+  {
+   "time": 1712579493.2342007,
+   "cpu": 0.5,
+   "network": {
+    "bytes_sent": 55992597,
+    "bytes_recv": 1584534138
+   }
+  },
+  {
+   "time": 1712579494.2354345,
+   "cpu": 0.3,
+   "network": {
+    "bytes_sent": 55992597,
+    "bytes_recv": 1584534204
+   }
+  },
+  {
+   "time": 1712579495.2369452,
+   "cpu": 0.3,
+   "network": {
+    "bytes_sent": 55992805,
+    "bytes_recv": 1584534412
+   }
+  },
+  {
+   "time": 1712579496.238402,
+   "cpu": 0.6,
+   "network": {
+    "bytes_sent": 55992805,
+    "bytes_recv": 1584534412
+   }
+  },
+  {
+   "time": 1712579497.239857,
+   "cpu": 0.7,
+   "network": {
+    "bytes_sent": 55992805,
+    "bytes_recv": 1584534412
+   }
+  },
+  {
+   "time": 1712579498.2413151,
+   "cpu": 2.2,
+   "network": {
+    "bytes_sent": 55992805,
+    "bytes_recv": 1584534412
+   }
+  },
+  {
+   "time": 1712579499.242777,
+   "cpu": 0.5,
+   "network": {
+    "bytes_sent": 55993079,
+    "bytes_recv": 1584534686
+   }
+  },
+  {
+   "time": 1712579500.2442455,
+   "cpu": 0.6,
+   "network": {
+    "bytes_sent": 55993079,
+    "bytes_recv": 1584534686
+   }
+  }
+ ]
+}
