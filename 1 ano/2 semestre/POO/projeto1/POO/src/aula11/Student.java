@@ -1,3 +1,4 @@
+package aula11;
 import java.util.List;
 
 public class Student {
@@ -24,5 +25,12 @@ public class Student {
 
     public void setGrades(List<Double> grades) {
         this.grades = grades;
+    }
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", grades=" + grades +
+                '}';
     }
 }

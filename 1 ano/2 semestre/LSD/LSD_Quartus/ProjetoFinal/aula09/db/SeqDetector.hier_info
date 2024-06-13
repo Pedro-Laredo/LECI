@@ -1,0 +1,12 @@
+|SeqDetectorFSM
+xin => yout.DATAB
+xin => s_nextState.S1.DATAIN
+xin => Selector0.IN1
+xin => s_nextState.DATAB
+xin => s_nextState.DATAB
+clk => yout~reg0.CLK
+clk => s_nextState~1.DATAIN
+clk => s_currentState~1.DATAIN
+yout << yout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

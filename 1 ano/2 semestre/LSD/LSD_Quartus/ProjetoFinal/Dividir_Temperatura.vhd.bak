@@ -1,0 +1,46 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity Dividir_Temperatura is
+	port( Temp_in : in std_logic_vector(7 downto 0);
+			Display0 : out std_logic_vector(6 downto 0);
+			Display1 : out std_logic_vector(6 downto 0);
+			Display2 : out std_logic_vector(6 downto 0);
+	end Dividir_Temperatura;
+	
+	architecture Behavioral of Dividir_Temperatura is
+	signal unidades : unsigned(7 downto 0);
+	signal dezenas : unsigned(7 downto 0);
+	signal centenas : unsigned (7 downto 0 ); 
+	
+	begin
+		centenas <= resize(cntValue / to_unsigned(100, cntValue'length), centenas'length);
+      dezenas <= resize((cntValue mod to_unsigned(100, cntValue'length)) / to_unsigned(10, cntValue'length), dezenas'length);
+      unidades <= resize(cntValue mod to_unsigned(10, cntValue'length), unidades'length);
+		
+		
+		Hex0_decoder : entity work.Bin7segDecoder
+        port map (
+            binInput => std_logic_vector(resize(unidades, 4)),
+            decOut_n => Display0
+        );
+
+		 Hex1_decoder : entity work.Bin7segDecoder
+			  port map (
+					binInput => std_logic_vector(resize(dezenas, 4)),
+					decOut_n => Display1
+			  );
+		Hex2_decoder : entity work.Bin7segDecoder
+			  port map (
+					binInput => std_logic_vector(resize(centenas, 4)),
+					decOut_n => Dispkay2
+			  );
+	end Behavioral;
+			 
+		
+
+	
+	
+	
+	

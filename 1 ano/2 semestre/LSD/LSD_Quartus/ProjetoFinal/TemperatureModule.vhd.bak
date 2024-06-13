@@ -1,0 +1,8 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+Entity TemperatureModule is
+	port(enable : in std_logic;
+		  clock : in std_logic;
+		  

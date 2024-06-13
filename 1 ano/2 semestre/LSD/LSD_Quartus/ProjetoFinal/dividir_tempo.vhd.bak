@@ -1,0 +1,8 @@
+LIBRARY IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity dividir_tempo is
+	port(time_In : in std_logic_vector(4 downto 0);
+			Saida_dezenas : std_logic_vector(3 downto 0);
+			Saida_unidades : std_logic(3 downto 0)
+			);

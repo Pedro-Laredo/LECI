@@ -1,0 +1,14 @@
+
+State Machine - |SeqDetectorFSM|s_nextState
+Name s_nextState.S3 s_nextState.S2 s_nextState.S1 s_nextState.S0 
+s_nextState.S0 0 0 0 0 
+s_nextState.S1 0 0 1 1 
+s_nextState.S2 0 1 0 1 
+s_nextState.S3 1 0 0 1 
+
+State Machine - |SeqDetectorFSM|s_currentState
+Name s_currentState.S3 s_currentState.S2 s_currentState.S1 s_currentState.S0 
+s_currentState.S0 0 0 0 0 
+s_currentState.S1 0 0 1 1 
+s_currentState.S2 0 1 0 1 
+s_currentState.S3 1 0 0 1 

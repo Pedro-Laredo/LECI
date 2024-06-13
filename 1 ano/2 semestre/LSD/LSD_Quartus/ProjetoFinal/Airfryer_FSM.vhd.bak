@@ -1,0 +1,22 @@
+Library IEEE;
+use ieee.std_logic_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+Entity AirfryerFSM is
+	port(
+			clk : in std_logic;
+			Start_Stop : in std_logic;
+			run : in std_logic;
+			Open_Oven : in std_logic;
+			Pogramas : in std_logic_vector(2 downto 0);
+			Status_Leds : out std_logic_vector(2 downto 0);
+			Food_In : in std_logic;
+			Display_Tempo_HEX0 : out std_logic_vector(6 downto 0);
+			Display_Tempo_HEX1 : out std_logic_vector(6 downto 0);
+			Display_Tempo_HEX2 : out std_logic_vector(6 downto 0);
+			Display_Temperatura_HEX4 : out std_logic_vector(6 downto 0);
+			Display_Temperatura_HEX4 : out std_logic_vector(6 downto 0);
+	end AirfryerFSM;
+			
+			
+			

@@ -1,0 +1,105 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/pedro/LSD/aula09/simulation/questa
+T_opt
+!s110 1715683748
+VBbWe98QKL@31az:UNg8f60
+04 17 8 work seqdetectorfsm_tb stimulus 1
+=1-e8fb1ca23487-664341a3-343-36d4
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Eseqdetectorfsm
+Z1 w1715682214
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8C:/Users/pedro/LSD/aula09/SeqDetectorFSM.vhd
+Z5 FC:/Users/pedro/LSD/aula09/SeqDetectorFSM.vhd
+l0
+L4 1
+Veeh877TC[Jcfa>[NMYSn_1
+!s100 gKBH=bFT_ZzE@f[lILYRO2
+Z6 OL;C;2021.2;73
+31
+Z7 !s110 1715683643
+!i10b 1
+Z8 !s108 1715683643.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/pedro/LSD/aula09/SeqDetectorFSM.vhd|
+Z10 !s107 C:/Users/pedro/LSD/aula09/SeqDetectorFSM.vhd|
+!i113 0
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Amealyarch
+R2
+R3
+Z13 DEx4 work 14 seqdetectorfsm 0 22 eeh877TC[Jcfa>[NMYSn_1
+!i122 0
+l16
+L12 47
+V<4J8olZh<AJ1liUf0@H4]3
+!s100 SLBhj>Qe2PNSUgV;`U8@z1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 0
+R11
+R12
+Eseqdetectorfsm_tb
+Z14 w1715683730
+R2
+R3
+!i122 2
+R0
+Z15 8C:/Users/pedro/LSD/aula09/SeqDetectorFSM_Tb.vhd
+Z16 FC:/Users/pedro/LSD/aula09/SeqDetectorFSM_Tb.vhd
+l0
+L4 1
+V0_hV36Kf1Uo=ZED311jDe1
+!s100 oVP?nGi@UOn;az34@ThV<1
+R6
+32
+Z17 !s110 1715683740
+!i10b 1
+Z18 !s108 1715683739.000000
+Z19 !s90 -reportprogress|300|-work|work|C:/Users/pedro/LSD/aula09/SeqDetectorFSM_Tb.vhd|
+Z20 !s107 C:/Users/pedro/LSD/aula09/SeqDetectorFSM_Tb.vhd|
+!i113 0
+Z21 o-work work
+R12
+Astimulus
+R13
+R2
+R3
+DEx4 work 17 seqdetectorfsm_tb 0 22 0_hV36Kf1Uo=ZED311jDe1
+!i122 2
+l13
+L7 46
+VN5b]nKNB32;oOYkoU@_@N2
+!s100 aif=f=VBn[GjFZQ_Nm95e3
+R6
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 0
+R21
+R12

@@ -1,0 +1,6 @@
+c:
+	cidade, 1;
+q:
+	queirs, 1;
+s:
+	serras, 1;

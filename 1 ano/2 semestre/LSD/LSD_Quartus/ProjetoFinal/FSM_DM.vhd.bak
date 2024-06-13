@@ -1,0 +1,31 @@
+Library IEEE;
+use ieee.std_logic_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+Entity FSM_DM is
+	port(
+			CLOCK_50 : in std_logic;
+			SW : in std_logic_vector(2 downto 0);
+			LEDR : out std_logic_vector(2 downto 0 );
+			LEDG : out std_logic_vector(2 downto 0)
+			);
+	end FSM_DM;
+	
+architecture Behavioral of FSM_DM is
+    signal clk : std_logic;
+    signal Run : std_logic;
+    signal luz_vermelha : std_logic_vector(2 downto 0);
+    signal luz_verde : std_logic_vector(2 downto 0);
+begin
+    -- Instância da FSM do Airfryer
+    Airfryer_FSM_inst : entity work.Airfryer_FSM
+        port map (
+            clk => CLOCK_50,
+            Run => SW(0), -- Assumindo que SW(0) é o controle de Run
+            luz_vermelha => LEDR,
+            luz_verde => LEDG
+        );
+
+    -- Outros componentes podem ser adicionados aqui, se necessário
+
+end Behavioral;

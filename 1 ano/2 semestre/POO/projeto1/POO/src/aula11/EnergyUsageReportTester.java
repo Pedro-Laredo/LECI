@@ -1,3 +1,4 @@
+package aula11;
 import java.util.Arrays;
 import java.io.IOException;
 
@@ -9,7 +10,11 @@ public class EnergyUsageReportTester {
         EnergyUsageReport energyReport = new EnergyUsageReport();
         
         // Load the customer data from a text file using the load() method
-        energyReport.load("clients.txt");
+        try {
+            energyReport.load("clients.txt");
+        } catch (Exception e) {
+            System.out.println("File not found");
+        }
         
         // Add one or more customers to the collection using the addCustomer() method
         Customer newCustomer = new Customer(999, Arrays.asList(1500.0, 2000.0, 2500.0, 3000.0));

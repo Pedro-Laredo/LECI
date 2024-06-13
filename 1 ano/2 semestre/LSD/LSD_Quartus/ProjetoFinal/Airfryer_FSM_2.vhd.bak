@@ -1,0 +1,74 @@
+library IEEE;
+use ieee.std_logic_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity Airfryer_FSM_2 is
+    port(
+        clk : in std_logic;
+        Start_Stop : in std_logic;
+        run : in std_logic;
+        Open_Oven : in std_logic;
+        Programas : in std_logic_vector(2 downto 0);
+        Status_Leds : out std_logic_vector(2 downto 0);
+        Food_In : in std_logic;
+        Cool_In : in std_logic;
+        Display_Tempo_HEX4: out std_logic_vector(6 downto 0);
+        Display_Tempo_HEX5: out std_logic_vector(6 downto 0);
+        Display_Temperatura_HEX0: out std_logic_vector(6 downto 0);
+        Display_Temperatura_HEX1: out std_logic_vector(6 downto 0);
+        Display_Temperatura_HEX2: out std_logic_vector(6 downto 0)
+    );
+end Airfryer_FSM_2;
+
+architecture Behavioral of Airfryer_FSM_2 is
+    type state is (IDLE, PREHEAT, COOK, FINISH, COOL);
+    signal s_currentState, s_nextState : state;
+    signal Time_Cook : std_logic_vector(4 downto 0);
+    signal Time_Preheat : std_logic_vector(4 downto 0);
+    signal Temperatura_Cook : std_logic_vector(7 downto 0);
+    signal Temperatura_Preheat : std_logic_vector(7 downto 0);
+    signal CLOCK_50 : std_logic;
+    signal HEX4 : std_logic_vector(6 downto 0);
+    signal HEX5 : std_logic_vector(6 downto 0);
+
+begin
+
+    -- Instantiate the TemperatureModule component
+    Time_Module_inst : entity work.TemperatureModule
+        port map(
+            CLOCK_50 => clk,
+            SetTemperature => Temperatura_Cook, -- Correctly map your temperature and time signals
+            InicialTemperature => Temperatura_Preheat,
+            HEX00=>Display_Temperatura_HEX0,
+            HEX11=>Display_Temperatura_HEX1,
+				HEX22=> Display_Temperatura_HEX2
+        );
+
+    process(clk)
+    begin 
+        if Start_Stop = '1' then
+            if rising_edge(clk) then
+                s_currentState <= s_nextState;
+                case s_currentState is
+                    when IDLE =>
+                        if run = '1' then
+                            s_nextState <= PREHEAT;
+                        end if;
+                    
+                    when PREHEAT =>
+                        Temperatura_Preheat <= "00010100";
+                        if Programas = "001" then
+                            Time_Preheat <= "00011"; -- 3 minutes
+                            Time_Cook <= "01111"; -- 15 minutes
+                            Temperatura_Cook <= "10110100"; -- 180 degrees
+                        end if;
+
+                    when others =>
+                        -- Handle other states if needed
+                        s_nextState <= PREHEAT;
+                end case;
+            end if;
+        end if;
+    end process;
+
+end Behavioral;

@@ -1,0 +1,105 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/pedro/LSD/aula07/parte1/simulation/questa
+T_opt
+!s110 1713858872
+V0Sz7?=^H7:fZ;h=:jLL:`3
+04 11 8 work dec2_4en_tb stimulus 1
+=1-e8fb1ca23487-66276938-16a-2f40
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Edec2_4en
+Z1 w1713858008
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8C:/Users/pedro/LSD/aula07/parte1/Dec2_4En.vhd
+Z5 FC:/Users/pedro/LSD/aula07/parte1/Dec2_4En.vhd
+l0
+L3 1
+VB@:Tz6jC53?KPT9;b8Oib0
+!s100 5IiZ8eY=10=0P6j9gO8bj2
+Z6 OL;C;2021.2;73
+31
+Z7 !s110 1713858459
+!i10b 1
+Z8 !s108 1713858459.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/pedro/LSD/aula07/parte1/Dec2_4En.vhd|
+Z10 !s107 C:/Users/pedro/LSD/aula07/parte1/Dec2_4En.vhd|
+!i113 0
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+Z13 DEx4 work 8 dec2_4en 0 22 B@:Tz6jC53?KPT9;b8Oib0
+!i122 0
+l9
+L8 18
+VBX^J314M3f^c4cc>U0i9D0
+!s100 beY^=3D[]H=Q<S=TbRGC@2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 0
+R11
+R12
+Edec2_4en_tb
+Z14 w1713858121
+R2
+R3
+!i122 7
+R0
+Z15 8C:/Users/pedro/LSD/aula07/parte1/Dec2_4En_Tb.vhd
+Z16 FC:/Users/pedro/LSD/aula07/parte1/Dec2_4En_Tb.vhd
+l0
+L4 1
+VJFn^2kR:<odPWJMeHK4`[0
+!s100 EGUfSIK5TJKnYz=C^oXk`0
+R6
+32
+Z17 !s110 1713858785
+!i10b 1
+Z18 !s108 1713858785.000000
+Z19 !s90 -reportprogress|300|-work|work|C:/Users/pedro/LSD/aula07/parte1/Dec2_4En_Tb.vhd|
+Z20 !s107 C:/Users/pedro/LSD/aula07/parte1/Dec2_4En_Tb.vhd|
+!i113 0
+Z21 o-work work
+R12
+Astimulus
+R13
+R2
+R3
+DEx4 work 11 dec2_4en_tb 0 22 JFn^2kR:<odPWJMeHK4`[0
+!i122 7
+l12
+L6 30
+V=:Xg5^@IBOzA5=:4l9CH20
+!s100 1SJ?PcMMYoT8FD4;B=OdQ0
+R6
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 0
+R21
+R12

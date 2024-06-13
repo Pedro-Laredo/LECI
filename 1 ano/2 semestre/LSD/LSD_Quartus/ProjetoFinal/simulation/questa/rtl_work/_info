@@ -1,0 +1,109 @@
+m255
+K4
+z2
+!s99 nomlopt
+!s11e vcom 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/pedro/LSD/ProjetoFinal/simulation/questa
+T_opt
+!s110 1717154274
+Voc<;BDOm;>2QA@T^kh:Pg2
+04 11 9 work tb_pulsegen testbench 1
+=1-e8fb1ca23487-6659b1e2-10-3794
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+Epulsegen
+Z1 w1717153490
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z5 8C:/Users/pedro/LSD/ProjetoFinal/PulseGen.vhd
+Z6 FC:/Users/pedro/LSD/ProjetoFinal/PulseGen.vhd
+l0
+L5 1
+VAnoKb@BQeIJDI^;CKSUnT2
+!s100 2T4B70@C0]e4c15CeXHzd3
+Z7 OL;C;2021.2;73
+32
+Z8 !s110 1717154261
+!i10b 1
+Z9 !s108 1717154261.000000
+Z10 !s90 -reportprogress|300|-work|work|C:/Users/pedro/LSD/ProjetoFinal/PulseGen.vhd|
+Z11 !s107 C:/Users/pedro/LSD/ProjetoFinal/PulseGen.vhd|
+!i113 0
+Z12 o-work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+Z14 DEx4 work 8 pulsegen 0 22 AnoKb@BQeIJDI^;CKSUnT2
+!i122 1
+l17
+L15 19
+Vh?`PN;kANR0F3cBYU8KfE3
+!s100 eMzfY[KS>[a2I_0DP1LoX2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Etb_pulsegen
+Z15 w1717154144
+R2
+R3
+R4
+!i122 2
+R0
+Z16 8C:/Users/pedro/LSD/ProjetoFinal/tb_PulseGen.vhd
+Z17 FC:/Users/pedro/LSD/ProjetoFinal/tb_PulseGen.vhd
+l0
+L5 1
+V>>c=lMeT6aTK=Ug_ClY^03
+!s100 OmLS<nkneo^mPnj>:334i3
+R7
+32
+R8
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|-work|work|C:/Users/pedro/LSD/ProjetoFinal/tb_PulseGen.vhd|
+Z19 !s107 C:/Users/pedro/LSD/ProjetoFinal/tb_PulseGen.vhd|
+!i113 0
+R12
+R13
+Atestbench
+R14
+R2
+R3
+R4
+DEx4 work 11 tb_pulsegen 0 22 >>c=lMeT6aTK=Ug_ClY^03
+!i122 2
+l14
+L8 36
+VPPjReVeHCf30=ei;1TgLK3
+!s100 ZF?`IkF?T>02_gz4mA:DZ2
+R7
+32
+R8
+!i10b 1
+R9
+R18
+R19
+!i113 0
+R12
+R13

@@ -1,0 +1,58 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity TimeModule is
+    port (
+        CLOCK_50  : in std_logic;
+        enable    : in std_logic;
+        HEX4      : out std_logic_vector(6 downto 0); 
+        HEX5      : out std_logic_vector(6 downto 0)  
+    );
+end TimeModule;
+
+architecture Behavioral of TimeModule is
+	 signal cntValueOut : std_logic_vector(4 downto 0);
+    signal cntValue : unsigned(4 downto 0);
+    signal dezenas : unsigned(4 downto 0); -- Corrected size to 4 bits
+    signal unidades : unsigned(4 downto 0); -- Corrected size to 4 bits
+    signal pulse : std_logic;  -- Declaração do sinal de pulso
+begin
+
+    Counter_inst : entity work.Counter
+        port map (
+            clk => CLOCK_50,
+            enable => pulse,  -- Conecta o pulso ao enable
+            cntOut => cntValueOut,
+				setValue => "10100"
+        );
+		  
+	 cntValue <= unsigned(cntValueOut);
+
+    PulseGen_inst : entity work.PulseGen  -- Instanciação do PulseGen
+        generic map (MAX => 50000000)  -- Configuração do generic MAX
+        port map (
+            clock => CLOCK_50,
+            reset => '0',  -- Reseta sempre em 0
+            pulse => pulse  -- Conecta o pulso ao sinal pulse
+        );
+
+    process(cntValue)
+    begin
+        dezenas <= cntValue / to_unsigned(10, 5);
+        unidades <= cntValue mod to_unsigned(10, 5);
+    end process;
+
+    Hex5_decoder : entity work.Bin7segDecoder
+        port map (
+            binInput => std_logic_vector(resize(dezenas, 4)),
+            decOut_n => HEX5
+        );
+
+    Hex6_decoder : entity work.Bin7segDecoder
+        port map (
+            binInput => std_logic_vector(resize(unidades, 4)),
+            decOut_n => HEX4
+        );
+
+end Behavioral;
