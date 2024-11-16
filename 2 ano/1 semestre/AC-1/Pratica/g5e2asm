@@ -1,0 +1,34 @@
+#mapa de registo
+#p: $t0
+#*p $t1
+#lista+size: $t2
+	.data
+	.eqv SIZE,10
+	.eqv print_string, 4
+	.eqv print_int,1
+str1:
+	.asciiz "\nConteudo array: \n"
+str2:
+	.asciiz "\n"
+
+lista:  .word 8, -4, 3, 5, 124, -15, 87, 9, 27, 15
+	.text
+	.globl main
+main:
+	li $v0,print_string
+	la $a0,str1
+	syscall
+	la $t0,lista
+	addiu $t2,$t0,SIZE
+while:
+	bge $t0,$t2,endwhile
+	lw $t1,0($t0)
+	li $v0,print_int
+	move $a0,$t1
+	syscall
+	li $v0,print_string
+	la $a0,str2
+	addiu $t0,$t0,1
+	j while
+
+endwhile:
