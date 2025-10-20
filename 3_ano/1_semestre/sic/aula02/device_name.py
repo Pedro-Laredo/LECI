@@ -7,3 +7,4 @@ def get_device_name(mac_address, timeout=10):
     else:
         print("Could not find device name (timeout or not in range).")
     return name
+
