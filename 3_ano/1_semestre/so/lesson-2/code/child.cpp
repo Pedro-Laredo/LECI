@@ -9,8 +9,7 @@
 int main(int argc, char *argv[])
 {
     printf("I'm the child: PID = %d, PPID = %d\n", getpid(), getppid());
-    usleep(500);
+    usleep(100000);
     printf("I'm the child: PID = %d, PPID = %d\n", getpid(), getppid());
-
    return EXIT_SUCCESS;
 }

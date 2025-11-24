@@ -53,12 +53,8 @@
 /home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/heap/libheap.a
 /home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/soc/libsoc.a
 /home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/esp_hw_support/libesp_hw_support.a
-/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/freertos/libfreertos.a
 /home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/esp_libc/libesp_libc.a
 /home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/pthread/libpthread.a
 /home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/cxx/libcxx.a
-/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/esp_ringbuf/libesp_ringbuf.a
-/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/esp_adc/libesp_adc.a
-/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/esp_ringbuf/libesp_ringbuf.a
+/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/freertos/libfreertos.a
 /home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/main/libmain.a
-/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/esp_adc/libesp_adc.a

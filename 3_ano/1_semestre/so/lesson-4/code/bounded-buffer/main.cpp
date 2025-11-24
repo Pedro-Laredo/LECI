@@ -135,7 +135,7 @@ int main (int argc, char *argv[])
         }
     }
 
-    /* launch child processes to play as producers */
+    /* launch parent processes to play as producers */
     pid_t ppid[np];
     for (uint32_t i = 0; i < np; i++)
     {

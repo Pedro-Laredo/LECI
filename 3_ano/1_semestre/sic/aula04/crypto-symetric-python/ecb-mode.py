@@ -13,7 +13,7 @@ def encryptor():
 
 
 def decryptor_func(ct,cipher):
-    key = bytes.fromhex("7723d87d773a8bbfe1ae5b081235b566")
+
     decryptor = cipher.decryptor()
     pt_bytes = decryptor.update(ct) + decryptor.finalize()
     return pt_bytes

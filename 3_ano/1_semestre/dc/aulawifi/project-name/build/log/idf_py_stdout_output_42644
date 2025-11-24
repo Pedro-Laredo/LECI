@@ -1,0 +1,5 @@
+Command: ninja flash
+[0/1] Re-running CMake...
+-- Component directory /home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aulawifi/project-name/components/components does not contain a CMakeLists.txt file. No component will be added
+-- Minimal build - ON
+-- Building ESP-IDF components for target esp32c6

@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "project-name",
-    "project_version":    "43a77d1-dirty",
+    "project_version":    "44c2ccfb-dirty",
     "project_path":       "/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name",
     "idf_path":           "/home/pedro-laredo/esp/esp-idf",
     "build_dir":          "/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build",
@@ -21,12 +21,12 @@
     "monitor_toolprefix": "riscv32-esp-elf-",
     "c_compiler":         "/home/pedro-laredo/.espressif/tools/riscv32-esp-elf/esp-15.1.0_20250607/riscv32-esp-elf/bin/riscv32-esp-elf-gcc",
     "config_environment" : {
-        "COMPONENT_KCONFIGS" : "/home/pedro-laredo/esp/esp-idf/components/efuse/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_adc/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_common/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_driver_gpio/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_hw_support/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_libc/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_mm/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_partition/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_pm/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_ringbuf/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_rom/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_security/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_system/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_timer/Kconfig;/home/pedro-laredo/esp/esp-idf/components/freertos/Kconfig;/home/pedro-laredo/esp/esp-idf/components/hal/Kconfig;/home/pedro-laredo/esp/esp-idf/components/heap/Kconfig;/home/pedro-laredo/esp/esp-idf/components/log/Kconfig;/home/pedro-laredo/esp/esp-idf/components/mbedtls/Kconfig;/home/pedro-laredo/esp/esp-idf/components/pthread/Kconfig;/home/pedro-laredo/esp/esp-idf/components/soc/Kconfig;/home/pedro-laredo/esp/esp-idf/components/spi_flash/Kconfig",
+        "COMPONENT_KCONFIGS" : "/home/pedro-laredo/esp/esp-idf/components/efuse/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_common/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_driver_gpio/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_hw_support/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_libc/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_mm/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_partition/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_pm/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_rom/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_security/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_system/Kconfig;/home/pedro-laredo/esp/esp-idf/components/esp_timer/Kconfig;/home/pedro-laredo/esp/esp-idf/components/freertos/Kconfig;/home/pedro-laredo/esp/esp-idf/components/hal/Kconfig;/home/pedro-laredo/esp/esp-idf/components/heap/Kconfig;/home/pedro-laredo/esp/esp-idf/components/log/Kconfig;/home/pedro-laredo/esp/esp-idf/components/mbedtls/Kconfig;/home/pedro-laredo/esp/esp-idf/components/pthread/Kconfig;/home/pedro-laredo/esp/esp-idf/components/soc/Kconfig;/home/pedro-laredo/esp/esp-idf/components/spi_flash/Kconfig",
         "COMPONENT_KCONFIGS_PROJBUILD" : "/home/pedro-laredo/esp/esp-idf/components/bootloader/Kconfig.projbuild;/home/pedro-laredo/esp/esp-idf/components/esp_app_format/Kconfig.projbuild;/home/pedro-laredo/esp/esp-idf/components/esp_rom/Kconfig.projbuild;/home/pedro-laredo/esp/esp-idf/components/esptool_py/Kconfig.projbuild;/home/pedro-laredo/esp/esp-idf/components/partition_table/Kconfig.projbuild"
     },
     "common_component_reqs": [ "cxx", "esp_libc", "freertos", "esp_hw_support", "heap", "log", "soc", "hal", "esp_rom", "esp_common", "esp_system", "riscv" ],
-    "build_components" : [ "app_update", "bootloader", "bootloader_support", "cxx", "efuse", "esp_adc", "esp_app_format", "esp_bootloader_format", "esp_common", "esp_driver_gpio", "esp_hal_i2c", "esp_hw_support", "esp_libc", "esp_mm", "esp_partition", "esp_pm", "esp_ringbuf", "esp_rom", "esp_security", "esp_system", "esp_timer", "esp_usb_cdc_rom_console", "esptool_py", "freertos", "hal", "heap", "log", "main", "mbedtls", "partition_table", "pthread", "riscv", "soc", "spi_flash", "" ],
-    "build_component_paths" : [ "/home/pedro-laredo/esp/esp-idf/components/app_update", "/home/pedro-laredo/esp/esp-idf/components/bootloader", "/home/pedro-laredo/esp/esp-idf/components/bootloader_support", "/home/pedro-laredo/esp/esp-idf/components/cxx", "/home/pedro-laredo/esp/esp-idf/components/efuse", "/home/pedro-laredo/esp/esp-idf/components/esp_adc", "/home/pedro-laredo/esp/esp-idf/components/esp_app_format", "/home/pedro-laredo/esp/esp-idf/components/esp_bootloader_format", "/home/pedro-laredo/esp/esp-idf/components/esp_common", "/home/pedro-laredo/esp/esp-idf/components/esp_driver_gpio", "/home/pedro-laredo/esp/esp-idf/components/esp_hal_i2c", "/home/pedro-laredo/esp/esp-idf/components/esp_hw_support", "/home/pedro-laredo/esp/esp-idf/components/esp_libc", "/home/pedro-laredo/esp/esp-idf/components/esp_mm", "/home/pedro-laredo/esp/esp-idf/components/esp_partition", "/home/pedro-laredo/esp/esp-idf/components/esp_pm", "/home/pedro-laredo/esp/esp-idf/components/esp_ringbuf", "/home/pedro-laredo/esp/esp-idf/components/esp_rom", "/home/pedro-laredo/esp/esp-idf/components/esp_security", "/home/pedro-laredo/esp/esp-idf/components/esp_system", "/home/pedro-laredo/esp/esp-idf/components/esp_timer", "/home/pedro-laredo/esp/esp-idf/components/esp_usb_cdc_rom_console", "/home/pedro-laredo/esp/esp-idf/components/esptool_py", "/home/pedro-laredo/esp/esp-idf/components/freertos", "/home/pedro-laredo/esp/esp-idf/components/hal", "/home/pedro-laredo/esp/esp-idf/components/heap", "/home/pedro-laredo/esp/esp-idf/components/log", "/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/main", "/home/pedro-laredo/esp/esp-idf/components/mbedtls", "/home/pedro-laredo/esp/esp-idf/components/partition_table", "/home/pedro-laredo/esp/esp-idf/components/pthread", "/home/pedro-laredo/esp/esp-idf/components/riscv", "/home/pedro-laredo/esp/esp-idf/components/soc", "/home/pedro-laredo/esp/esp-idf/components/spi_flash", "" ],
+    "build_components" : [ "app_update", "bootloader", "bootloader_support", "cxx", "efuse", "esp_app_format", "esp_bootloader_format", "esp_common", "esp_driver_gpio", "esp_hal_i2c", "esp_hw_support", "esp_libc", "esp_mm", "esp_partition", "esp_pm", "esp_rom", "esp_security", "esp_system", "esp_timer", "esp_usb_cdc_rom_console", "esptool_py", "freertos", "hal", "heap", "log", "main", "mbedtls", "partition_table", "pthread", "riscv", "soc", "spi_flash", "" ],
+    "build_component_paths" : [ "/home/pedro-laredo/esp/esp-idf/components/app_update", "/home/pedro-laredo/esp/esp-idf/components/bootloader", "/home/pedro-laredo/esp/esp-idf/components/bootloader_support", "/home/pedro-laredo/esp/esp-idf/components/cxx", "/home/pedro-laredo/esp/esp-idf/components/efuse", "/home/pedro-laredo/esp/esp-idf/components/esp_app_format", "/home/pedro-laredo/esp/esp-idf/components/esp_bootloader_format", "/home/pedro-laredo/esp/esp-idf/components/esp_common", "/home/pedro-laredo/esp/esp-idf/components/esp_driver_gpio", "/home/pedro-laredo/esp/esp-idf/components/esp_hal_i2c", "/home/pedro-laredo/esp/esp-idf/components/esp_hw_support", "/home/pedro-laredo/esp/esp-idf/components/esp_libc", "/home/pedro-laredo/esp/esp-idf/components/esp_mm", "/home/pedro-laredo/esp/esp-idf/components/esp_partition", "/home/pedro-laredo/esp/esp-idf/components/esp_pm", "/home/pedro-laredo/esp/esp-idf/components/esp_rom", "/home/pedro-laredo/esp/esp-idf/components/esp_security", "/home/pedro-laredo/esp/esp-idf/components/esp_system", "/home/pedro-laredo/esp/esp-idf/components/esp_timer", "/home/pedro-laredo/esp/esp-idf/components/esp_usb_cdc_rom_console", "/home/pedro-laredo/esp/esp-idf/components/esptool_py", "/home/pedro-laredo/esp/esp-idf/components/freertos", "/home/pedro-laredo/esp/esp-idf/components/hal", "/home/pedro-laredo/esp/esp-idf/components/heap", "/home/pedro-laredo/esp/esp-idf/components/log", "/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/main", "/home/pedro-laredo/esp/esp-idf/components/mbedtls", "/home/pedro-laredo/esp/esp-idf/components/partition_table", "/home/pedro-laredo/esp/esp-idf/components/pthread", "/home/pedro-laredo/esp/esp-idf/components/riscv", "/home/pedro-laredo/esp/esp-idf/components/soc", "/home/pedro-laredo/esp/esp-idf/components/spi_flash", "" ],
     "build_component_info" : {
         "app_update": {
             "alias": "idf::app_update",
@@ -102,21 +102,6 @@
             "file": "/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/efuse/libefuse.a",
             "sources": [ "/home/pedro-laredo/esp/esp-idf/components/efuse/esp32c6/esp_efuse_table.c", "/home/pedro-laredo/esp/esp-idf/components/efuse/esp32c6/esp_efuse_fields.c", "/home/pedro-laredo/esp/esp-idf/components/efuse/esp32c6/esp_efuse_rtc_calib.c", "/home/pedro-laredo/esp/esp-idf/components/efuse/esp32c6/esp_efuse_utility.c", "/home/pedro-laredo/esp/esp-idf/components/efuse/src/esp_efuse_api.c", "/home/pedro-laredo/esp/esp-idf/components/efuse/src/esp_efuse_fields.c", "/home/pedro-laredo/esp/esp-idf/components/efuse/src/esp_efuse_utility.c", "/home/pedro-laredo/esp/esp-idf/components/efuse/src/efuse_controller/keys/with_key_purposes/esp_efuse_api_key.c", "/home/pedro-laredo/esp/esp-idf/components/efuse/src/esp_efuse_startup.c" ],
             "include_dirs": [ "include", "esp32c6/include" ]
-        },
-        "esp_adc": {
-            "alias": "idf::esp_adc",
-            "target": "___idf_esp_adc",
-            "prefix": "idf",
-            "dir": "/home/pedro-laredo/esp/esp-idf/components/esp_adc",
-            "type": "LIBRARY",
-            "lib": "__idf_esp_adc",
-            "reqs": [],
-            "priv_reqs": [ "esp_driver_gpio", "efuse", "esp_pm", "esp_ringbuf", "esp_mm" ],
-            "managed_reqs": [],
-            "managed_priv_reqs": [],
-            "file": "/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/esp_adc/libesp_adc.a",
-            "sources": [ "/home/pedro-laredo/esp/esp-idf/components/esp_adc/adc_oneshot.c", "/home/pedro-laredo/esp/esp-idf/components/esp_adc/adc_common.c", "/home/pedro-laredo/esp/esp-idf/components/esp_adc/adc_cali.c", "/home/pedro-laredo/esp/esp-idf/components/esp_adc/adc_cali_curve_fitting.c", "/home/pedro-laredo/esp/esp-idf/components/esp_adc/adc_continuous.c", "/home/pedro-laredo/esp/esp-idf/components/esp_adc/adc_monitor.c", "/home/pedro-laredo/esp/esp-idf/components/esp_adc/gdma/adc_dma.c", "/home/pedro-laredo/esp/esp-idf/components/esp_adc/adc_filter.c", "/home/pedro-laredo/esp/esp-idf/components/esp_adc/esp32c6/curve_fitting_coefficients.c" ],
-            "include_dirs": [ "include", "interface", "esp32c6/include" ]
         },
         "esp_app_format": {
             "alias": "idf::esp_app_format",
@@ -266,21 +251,6 @@
             "managed_priv_reqs": [],
             "file": "/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/esp_pm/libesp_pm.a",
             "sources": [ "/home/pedro-laredo/esp/esp-idf/components/esp_pm/pm_locks.c", "/home/pedro-laredo/esp/esp-idf/components/esp_pm/pm_trace.c", "/home/pedro-laredo/esp/esp-idf/components/esp_pm/pm_impl.c" ],
-            "include_dirs": [ "include" ]
-        },
-        "esp_ringbuf": {
-            "alias": "idf::esp_ringbuf",
-            "target": "___idf_esp_ringbuf",
-            "prefix": "idf",
-            "dir": "/home/pedro-laredo/esp/esp-idf/components/esp_ringbuf",
-            "type": "LIBRARY",
-            "lib": "__idf_esp_ringbuf",
-            "reqs": [],
-            "priv_reqs": [],
-            "managed_reqs": [],
-            "managed_priv_reqs": [],
-            "file": "/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/esp_ringbuf/libesp_ringbuf.a",
-            "sources": [ "/home/pedro-laredo/esp/esp-idf/components/esp_ringbuf/ringbuf.c" ],
             "include_dirs": [ "include" ]
         },
         "esp_rom": {
@@ -440,8 +410,8 @@
             "dir": "/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/main",
             "type": "LIBRARY",
             "lib": "__idf_main",
-            "reqs": [],
-            "priv_reqs": [ "esp_adc" ],
+            "reqs": [ "freertos" ],
+            "priv_reqs": [ "esp_driver_gpio" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/main/libmain.a",
@@ -1890,8 +1860,8 @@
             "prefix": "idf",
             "dir": "/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/main",
             "lib": "__idf_main",
-            "reqs": [],
-            "priv_reqs": [ "esp_adc" ],
+            "reqs": [ "freertos" ],
+            "priv_reqs": [ "esp_driver_gpio" ],
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "include_dirs": [ "." ]

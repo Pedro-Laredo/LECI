@@ -19,13 +19,13 @@ int main(void)
   bwRandomDelay(1000, 100000); // added to enhance the occurrence of different outputs
   if (pid == 0) {
     // este bloco é o FILHO
-    printf("I was printed by the child\n");
+    printf("%d," ", %d I  was printed by the child\n",getpid(),getppid());
     } else {
     // este bloco é o PAI; 'pid' contém o PID do filho
-    printf("I was printed by the parent");
+
+    printf("I was printed by the parent %d,%d",getpid(),getppid());
 }
   //printf("  Was I printed by the parent or by the child process? How can I know it?\n"); 
   
   return EXIT_SUCCESS;
 }
-

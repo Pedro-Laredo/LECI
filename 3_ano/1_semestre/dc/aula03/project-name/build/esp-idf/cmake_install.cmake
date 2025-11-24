@@ -174,11 +174,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/freertos/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/esp_libc/cmake_install.cmake")
 endif()
 
@@ -194,12 +189,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/esp_ringbuf/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/esp_adc/cmake_install.cmake")
+  include("/home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aula03/project-name/build/esp-idf/freertos/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

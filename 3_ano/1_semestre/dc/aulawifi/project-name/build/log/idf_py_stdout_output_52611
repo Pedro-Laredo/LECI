@@ -1,0 +1,279 @@
+Command: /home/pedro-laredo/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/pedro-laredo/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32c6 --revision 0 --decode-panic backtrace /home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aulawifi/project-name/build/project-name.elf /home/pedro-laredo/Desktop/LECI/3_ano/1_semestre/dc/aulawifi/project-name/build/bootloader/bootloader.elf -m '/home/pedro-laredo/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/pedro-laredo/esp/esp-idf/tools/idf.py'
+[0;32mI (104) esp_�ESP-ROM:esp32c6-20220919[0m
+Build:Sep 19 2022
+rst:0x1 (POWERON),boot:0x7d (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:2
+load:0x40875730,len:0x175c
+load:0x4086b910,len:0xeac
+load:0x4086e610,len:0x318c
+entry 0x4086b91a
+[0;32mI (23) boot: ESP-IDF v6.0-dev-2367-g5c5eb99eab 2nd stage bootloader[0m
+[0;32mI (24) boot: compile time Nov 21 2025 15:33:03[0m
+[0;32mI (24) boot: chip revision: v0.2[0m
+[0;32mI (25) boot: efuse block revision: v0.3[0m
+[0;32mI (29) boot.esp32c6: SPI Speed      : 80MHz[0m
+[0;32mI (33) boot.esp32c6: SPI Mode       : DIO[0m
+[0;32mI (36) boot.esp32c6: SPI Flash Size : 2MB[0m
+[0;32mI (40) boot: Enabling RNG early entropy source...[0m
+[0;32mI (45) boot: Partition Table:[0m
+[0;32mI (47) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (54) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (60) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (67) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (73) boot: End of partition table[0m
+[0;32mI (76) esp_image: segment 0: paddr=00010020 vaddr=42090020 size=1af54h (110420) map[0m
+[0;32mI (104) esp_image: segment 1: paddr=0002af7c vaddr=40800000 size=0509ch ( 20636) load[0m
+[0;32mI (109) esp_image: segment 2: paddr=00030020 vaddr=42000020 size=8a298h (565912) map[0m
+[0;32mI (214) esp_image: segment 3: paddr=000ba2c0 vaddr=4080509c size=162b8h ( 90808) load[0m
+[0;32mI (239) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (239) boot: Disabling RNG early entropy source...[0m
+[0;32mI (249) cpu_start: Unicore app[0m
+[0;32mI (258) cpu_start: GPIO 17 and 16 are used as console UART I/O pins[0m
+[0;32mI (258) cpu_start: Pro cpu start user code[0m
+[0;32mI (258) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (260) app_init: Application information:[0m
+[0;32mI (264) app_init: Project name:     project-name[0m
+[0;32mI (268) app_init: App version:      44c2ccfb-dirty[0m
+[0;32mI (273) app_init: Compile time:     Nov 21 2025 15:43:18[0m
+[0;32mI (278) app_init: ELF file SHA256:  480511040...[0m
+[0;32mI (282) app_init: ESP-IDF:          v6.0-dev-2367-g5c5eb99eab[0m
+[0;32mI (288) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (291) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (295) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (299) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (306) heap_init: At 40820710 len 0005BF00 (367 KiB): RAM[0m
+[0;32mI (311) heap_init: At 4087C610 len 00002F54 (11 KiB): RAM[0m
+[0;32mI (316) heap_init: At 50000000 len 00003FE8 (15 KiB): RTCRAM[0m
+[0;32mI (322) spi_flash: detected chip: generic[0m
+[0;32mI (325) spi_flash: flash io: dio[0m
+[0;33mW (328) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (340) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (346) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (353) main_task: Started on CPU0[0m
+[0;32mI (363) main_task: Calling app_main()[0m
+[0;32mI (383) wifi station: ESP_WIFI_MODE_STA[0m
+[0;32mI (383) pp: pp rom version: 5b8dcfa[0m
+[0;32mI (383) net80211: net80211 rom version: 5b8dcfa[0m
+[0;32mI (393) wifi:wifi driver task: 40826b20, prio:23, stack:6656, core=0[0m
+[0;32mI (393) wifi:wifi firmware version: df85326[0m
+[0;32mI (393) wifi:wifi certification version: v7.0[0m
+[0;32mI (393) wifi:config NVS flash: enabled[0m
+[0;32mI (393) wifi:config nano formatting: disabled[0m
+[0;32mI (403) wifi:mac_version:HAL_MAC_ESP32AX_761,ut_version:N, band mode:0x1[0m
+[0;32mI (403) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (413) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (413) wifi:Init management short buffer num: 32[0m
+[0;32mI (423) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (423) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (423) wifi:Init static rx buffer size: 1700 (rxctrl:92, csi:512)[0m
+[0;32mI (433) wifi:Init static rx buffer num: 10[0m
+[0;32mI (433) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (443) wifi_init: rx ba win: 6[0m
+[0;32mI (443) wifi_init: accept mbox: 6[0m
+[0;32mI (443) wifi_init: tcpip mbox: 32[0m
+[0;32mI (453) wifi_init: udp mbox: 6[0m
+[0;32mI (453) wifi_init: tcp mbox: 6[0m
+[0;32mI (453) wifi_init: tcp tx win: 5760[0m
+[0;32mI (463) wifi_init: tcp rx win: 5760[0m
+[0;32mI (463) wifi_init: tcp mss: 1440[0m
+[0;32mI (463) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (473) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (473) wifi_init: WiFi SLP IRAM OP enabled[0m
+[0;32mI (473) phy_init: phy_version 341,a6c8fe6,Jul 30 2025,18:34:11[0m
+[0;33mW (553) wifi:ACK_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (553) wifi:CTS_TAB0   :0x   90a0b, QAM16:0x9 (24Mbps), QPSK:0xa (12Mbps), BPSK:0xb (6Mbps)[0m
+[0;33mW (563) wifi:(agc)0x600a7128:0xd2178a10, min.avgNF:0xce->0xd2(dB), RCalCount:0x178, min.RRssi:0xa10(-95.00)[0m
+[0;32mI (573) wifi:11ax coex: WDEVAX_PTI0(0x000a00a0), WDEVAX_PTI1(0x000052b2).[0m
+
+[0;32mI (573) wifi:mode : sta (10:51:db:01:88:f8)[0m
+[0;32mI (583) wifi:enable tsf[0m
+[0;32mI (583) wifi station: wifi_init_sta finished.[0m
+[0;32mI (593) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (593) wifi:(mac)omc_ul_mu_data_disable_rx:0[0m
+[0;32mI (603) wifi:(phy)ppe_thresholds_present:0, nominal_packet_padding:1[0m
+[0;32mI (603) wifi:(phy)dcm tx(constellation:0, nss:0), dcm rx(constellation:1, nss:0)[0m
+[0;32mI (613) wifi:(phy)rx_mcs_map:0xfff5, tx_mcs_map:0xfff5, stbc_tx:0, bfmer(su:0, mu:0), ldpc:1, max_rate:172[0m
+[0;32mI (623) wifi:(opr)bss color disabled:1[0m
+[0;32mI (623) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (633) wifi:(opr)len:7, Default PE Duration:0, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:1[0m
+[0;32mI (643) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (653) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (663) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (663) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (693) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (693) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (693) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (703) wifi:Extended Capabilities length:8, operating_mode_notification:1[0m
+[0;32mI (713) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (723) wifi:(mac)omc_ul_mu_data_disable_rx:0[0m
+[0;32mI (723) wifi:(phy)ppe_thresholds_present:0, nominal_packet_padding:1[0m
+[0;32mI (733) wifi:(phy)dcm tx(constellation:0, nss:0), dcm rx(constellation:1, nss:0)[0m
+[0;32mI (733) wifi:(phy)rx_mcs_map:0xfff5, tx_mcs_map:0xfff5, stbc_tx:0, bfmer(su:0, mu:0), ldpc:1, max_rate:172[0m
+[0;32mI (743) wifi:(opr)bss color disabled:1[0m
+[0;32mI (753) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (763) wifi:(opr)len:7, Default PE Duration:0, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:1[0m
+[0;32mI (773) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (773) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (783) wifi:(he)ppe_thresholds_present:0, nominal_packet_padding(rx:1, cfg:1)[0m
+[0;32mI (783) wifi:(trc)phytype:CBW20-SGI, snr:46, maxRate:172, highestRateIdx:0[0m
+[0;33mW (793) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (803) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:46, ampduState:wait operational[0m
+[0;32mI (813) wifi:ifidx:0, rssi:-51, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x7, 11ax), max_rate:172, he:1, vht:0, ht:1[0m
+[0;32mI (823) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:6(8 us)[0m
+[0;32mI (843) wifi:(extcap)mbssid:0, enhanced_mbssid_advertise:0, complete_nontxbssid_profiles:0, twt_responder: 0[0m
+[0;32mI (843) wifi:connected with laredo, aid = 13, channel 6, BW20, bssid = 36:06:6e:62:22:04[0m
+[0;32mI (853) wifi:security: WPA2-PSK, phy:ax, rssi:-51, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (863) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (863) wifi:pm start, type:1, aid:0xd, trans-BSSID:36:06:6e:62:22:04, BSSID[5]:0x4, mbssid(max-indicator:0, index:0), he:1[0m
+[0;32mI (873) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (883) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (893) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:1, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (903) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:2, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (913) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:3, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (933) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (933) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (933) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (943) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;33mW (953) wifi:<ba-add>idx:0, ifx:0, tid:6, TAHI:0x1000422, TALO:0x626e0636, (ssn:2911, win:64, cur_ssn:2911), CONF:0xc0006005[0m
+[0;32mI (1983) esp_netif_handlers: sta ip: 172.20.10.6, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (1983) wifi station: got ip:172.20.10.6[0m
+[0;32mI (1983) wifi station: connected to ap SSID:laredo password:pedropedro[0m
+[0;32mI (1983) main_task: Returned from app_main()[0m
+[0;32mI (98883) wifi:bcn_timeout,ap_probe_send_start[0m
+[0;32mI (101383) wifi:ap_probe_send over, reset wifi status to disassoc[0m
+[0;32mI (101383) wifi:state: run -> init (0xc800)[0m
+[0;32mI (101393) wifi:pm stop, total sleep time: 89828840 us / 100515675 us[0m
+
+[0;32mI (101393) wifi:<ba-del>idx:0, tid:6[0m
+[0;32mI (101393) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (101403) wifi station: retry to connect to the AP[0m
+[0;32mI (101403) wifi station: connect to the AP fail[0m
+[0;32mI (101423) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (101423) wifi:(mac)omc_ul_mu_data_disable_rx:0[0m
+[0;32mI (101423) wifi:(phy)ppe_thresholds_present:0, nominal_packet_padding:1[0m
+[0;32mI (101433) wifi:(phy)dcm tx(constellation:0, nss:0), dcm rx(constellation:1, nss:0)[0m
+[0;32mI (101443) wifi:(phy)rx_mcs_map:0xfff5, tx_mcs_map:0xfff5, stbc_tx:0, bfmer(su:0, mu:0), ldpc:1, max_rate:172[0m
+[0;32mI (101453) wifi:(opr)bss color disabled:1[0m
+[0;32mI (101453) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (101463) wifi:(opr)len:7, Default PE Duration:0, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:1[0m
+[0;32mI (101473) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (101483) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (101493) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (101493) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (101513) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (101523) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (101523) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (101533) wifi:Extended Capabilities length:8, operating_mode_notification:1[0m
+[0;32mI (101543) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (101543) wifi:(mac)omc_ul_mu_data_disable_rx:0[0m
+[0;32mI (101553) wifi:(phy)ppe_thresholds_present:0, nominal_packet_padding:1[0m
+[0;32mI (101563) wifi:(phy)dcm tx(constellation:0, nss:0), dcm rx(constellation:1, nss:0)[0m
+[0;32mI (101563) wifi:(phy)rx_mcs_map:0xfff5, tx_mcs_map:0xfff5, stbc_tx:0, bfmer(su:0, mu:0), ldpc:1, max_rate:172[0m
+[0;32mI (101573) wifi:(opr)bss color disabled:1[0m
+[0;32mI (101583) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (101593) wifi:(opr)len:7, Default PE Duration:0, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:1[0m
+[0;32mI (101603) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (101603) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (101613) wifi:(he)ppe_thresholds_present:0, nominal_packet_padding(rx:1, cfg:1)[0m
+[0;32mI (101623) wifi:(trc)phytype:CBW20-SGI, snr:53, maxRate:172, highestRateIdx:0[0m
+[0;33mW (101623) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (101633) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:53, ampduState:wait operational[0m
+[0;32mI (101643) wifi:ifidx:0, rssi:-44, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x7, 11ax), max_rate:172, he:1, vht:0, ht:1[0m
+[0;32mI (101653) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:6(8 us)[0m
+[0;32mI (101693) wifi:(extcap)mbssid:0, enhanced_mbssid_advertise:0, complete_nontxbssid_profiles:0, twt_responder: 0[0m
+[0;32mI (101693) wifi:connected with laredo, aid = 13, channel 6, BW20, bssid = 02:fa:9e:48:d3:24[0m
+[0;32mI (101703) wifi:security: WPA2-PSK, phy:ax, rssi:-44, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (101713) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (101713) wifi:pm start, type:1, aid:0xd, trans-BSSID:02:fa:9e:48:d3:24, BSSID[5]:0x24, mbssid(max-indicator:0, index:0), he:1[0m
+[0;32mI (101723) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (101733) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:4, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (101743) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:5, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (101753) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:6, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (101783) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (101783) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (101793) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (101803) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;33mW (101903) wifi:<ba-add>idx:0, ifx:0, tid:6, TAHI:0x10024d3, TALO:0x489efa02, (ssn:404, win:64, cur_ssn:404), CONF:0xc0006005[0m
+[0;32mI (102913) esp_netif_handlers: sta ip: 172.20.10.6, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (102913) wifi station: got ip:172.20.10.6[0m
+[0;32mI (125403) wifi:bcn_timeout,ap_probe_send_start[0m
+[0;32mI (127903) wifi:ap_probe_send over, reset wifi status to disassoc[0m
+[0;32mI (127903) wifi:state: run -> init (0xc800)[0m
+[0;32mI (127913) wifi:pm stop, total sleep time: 17110353 us / 26183577 us[0m
+
+[0;32mI (127913) wifi:<ba-del>idx:0, tid:6[0m
+[0;32mI (127913) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (127923) wifi station: retry to connect to the AP[0m
+[0;32mI (127923) wifi station: connect to the AP fail[0m
+[0;32mI (130333) wifi station: retry to connect to the AP[0m
+[0;32mI (130333) wifi station: connect to the AP fail[0m
+[0;32mI (130343) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (130343) wifi:(mac)omc_ul_mu_data_disable_rx:0[0m
+[0;32mI (130343) wifi:(phy)ppe_thresholds_present:0, nominal_packet_padding:1[0m
+[0;32mI (130353) wifi:(phy)dcm tx(constellation:0, nss:0), dcm rx(constellation:1, nss:0)[0m
+[0;32mI (130353) wifi:(phy)rx_mcs_map:0xfff5, tx_mcs_map:0xfff5, stbc_tx:0, bfmer(su:0, mu:0), ldpc:1, max_rate:172[0m
+[0;32mI (130363) wifi:(opr)bss color disabled:1[0m
+[0;32mI (130373) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (130383) wifi:(opr)len:7, Default PE Duration:0, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:1[0m
+[0;32mI (130393) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (130403) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (130403) wifi:(connect)dot11_authmode:0x3, pairwise_cipher:0x3, group_cipher:0x3[0m
+[0;32mI (130413) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (130423) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (130433) wifi:(assoc)RESP, Extended Capabilities length:8, operating_mode_notification:0[0m
+[0;32mI (130433) wifi:(assoc)RESP, Extended Capabilities, MBSSID:0, TWT Responder:0, OBSS Narrow Bandwidth RU In OFDMA Tolerance:0[0m
+[0;32mI (130443) wifi:Extended Capabilities length:8, operating_mode_notification:1[0m
+[0;32mI (130453) wifi:(he)max.RxAMPDULenExponentExtension:3, max.RxAMPDUpre-EOFpaddingBytes:8388607(0x7fffff)[0m
+[0;32mI (130453) wifi:(mac)omc_ul_mu_data_disable_rx:0[0m
+[0;32mI (130463) wifi:(phy)ppe_thresholds_present:0, nominal_packet_padding:1[0m
+[0;32mI (130463) wifi:(phy)dcm tx(constellation:0, nss:0), dcm rx(constellation:1, nss:0)[0m
+[0;32mI (130473) wifi:(phy)rx_mcs_map:0xfff5, tx_mcs_map:0xfff5, stbc_tx:0, bfmer(su:0, mu:0), ldpc:1, max_rate:172[0m
+[0;32mI (130483) wifi:(opr)bss color disabled:1[0m
+[0;32mI (130493) wifi:(opr)len:7, TWT Required:0, VHT Opr Info Present:0, 6GHz Opr Info Present:0, Co-Hosted BSS:0(max_indicator:0), Basic MCS and NSS:0xfffc[0m
+[0;32mI (130503) wifi:(opr)len:7, Default PE Duration:0, TXOP RTS Threshold:1023(0 us), ER-SU-Disable:1[0m
+[0;32mI (130513) wifi:(opr)len:7, BSS Color:0, disabled:1, Partial BSS Color:0[0m
+[0;32mI (130513) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (130523) wifi:(he)ppe_thresholds_present:0, nominal_packet_padding(rx:1, cfg:1)[0m
+[0;32mI (130533) wifi:(trc)phytype:CBW20-SGI, snr:55, maxRate:172, highestRateIdx:0[0m
+[0;33mW (130533) wifi:(trc)band:2G, phymode:3, highestRateIdx:0, lowestRateIdx:11, dataSchedTableSize:14[0m
+[0;32mI (130543) wifi:(trc)band:2G, rate(S-MCS7, rateIdx:0), ampdu(rate:S-MCS7, schedIdx(0, stop:8)), snr:55, ampduState:wait operational[0m
+[0;32mI (130553) wifi:ifidx:0, rssi:-42, nf:-97, phytype(0x3, CBW20-SGI), phymode(0x7, 11ax), max_rate:172, he:1, vht:0, ht:1[0m
+[0;32mI (130563) wifi:(ht)max.RxAMPDULenExponent:3(65535 bytes), MMSS:6(8 us)[0m
+[0;32mI (130583) wifi:(extcap)mbssid:0, enhanced_mbssid_advertise:0, complete_nontxbssid_profiles:0, twt_responder: 0[0m
+[0;32mI (130583) wifi:connected with laredo, aid = 13, channel 6, BW20, bssid = 92:c7:43:34:8e:2f[0m
+[0;32mI (130593) wifi:security: WPA2-PSK, phy:ax, rssi:-42, cipher(pairwise:0x3, group:0x3), pmf:0, [0m
+[0;32mI (130603) wifi:pm start, type: 1, twt_start:0[0m
+
+[0;32mI (130603) wifi:pm start, type:1, aid:0xd, trans-BSSID:92:c7:43:34:8e:2f, BSSID[5]:0x2f, mbssid(max-indicator:0, index:0), he:1[0m
+[0;32mI (130613) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000[0m
+[0;32mI (130623) wifi:[ADDBA]TX addba request, tid:0, dialogtoken:7, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (130633) wifi:[ADDBA]TX addba request, tid:7, dialogtoken:8, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x20)[0m
+[0;32mI (130643) wifi:[ADDBA]TX addba request, tid:5, dialogtoken:9, bufsize:32, A-MSDU:0(not supported), policy:1(IMR), ssn:0(0x0)[0m
+[0;32mI (130673) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (130673) wifi:[ADDBA]RX addba response, status:0, tid:0/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (130673) wifi:[ADDBA]RX addba response, status:0, tid:7/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;32mI (130683) wifi:[ADDBA]RX addba response, status:0, tid:5/tb:1(0xa1), bufsize:32, batimeout:0, txa_wnd:32[0m
+[0;33mW (130753) wifi:<ba-add>idx:0, ifx:0, tid:6, TAHI:0x1002f8e, TALO:0x3443c792, (ssn:392, win:64, cur_ssn:392), CONF:0xc0006005[0m
+[0;32mI (131763) esp_netif_handlers: sta ip: 172.20.10.6, mask: 255.255.255.240, gw: 172.20.10.1[0m
+[0;32mI (131763) wifi station: got ip:172.20.10.6[0m
+[0;32mI (265393) wifi:bcn_timeout,ap_probe_send_start[0m
+[0;32mI (267893) wifi:ap_probe_send over, reset wifi status to disassoc[0m
+[0;32mI (267893) wifi:state: run -> init (0xc800)[0m
+[0;32mI (267903) wifi:pm stop, total sleep time: 115139549 us / 137283425 us[0m
+
+[0;32mI (267903) wifi:<ba-del>idx:0, tid:6[0m
+[0;32mI (267903) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (267903) wifi station: retry to connect to the AP[0m
+[0;32mI (267913) wifi station: connect to the AP fail[0m
+[0;32mI (270313) wifi station: retry to connect to the AP[0m
+[0;32mI (270313) wifi station: connect to the AP fail[0m
+[0;32mI (272723) wifi station: retry to connect to the AP[0m
+[0;32mI (272723) wifi station: connect to the AP fail[0m
+[0;32mI (275133) wifi station: retry to connect to the AP[0m
+[0;32mI (275133) wifi station: connect to the AP fail[0m
+[0;32mI (277533) wifi station: retry to connect to the AP[0m
+[0;32mI (277533) wifi station: connect to the AP fail[0m
+[0;32mI (279943) wifi station: connect to the AP fail[0m

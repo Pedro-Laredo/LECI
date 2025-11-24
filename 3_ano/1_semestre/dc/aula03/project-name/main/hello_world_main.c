@@ -1,40 +1,50 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-#include "esp_adc/adc_oneshot.h"
+#include "freertos/queue.h"
+#include "driver/gpio.h"
+#define INPUT_GPIO GPIO_NUM_9 // example input pin
 
-#define ADC_CHANNEL ADC_CHANNEL_0 // GPIO0 (check pin mapping for ESP32-C6)
-#define ADC_UNIT ADC_UNIT_1 // Use ADC1
-#define ADC_ATTEN ADC_ATTEN_DB_12 // 12 dB, ~1.1 V full-scale
+static QueueHandle_t gpio_evt_queue = NULL;
+// ISR handler
+static void IRAM_ATTR gpio_isr_handler(void *arg)
+{
+    uint32_t gpio_num = (uint32_t) arg;
+    // Send GPIO number to the queue (from ISR context)
+    xQueueSendFromISR(gpio_evt_queue, &gpio_num, NULL);
+}
 
+// Task that handles GPIO events
+static void gpio_task(void *arg)
+{
+    uint32_t io_num;
+    for(;;) {
+        if (xQueueReceive(gpio_evt_queue, &io_num, portMAX_DELAY)) {
+            printf("Interrupcao no GPIO %u\n", (unsigned int)io_num);
 
+        }
+    }
+}
 void app_main(void)
 {
-    // ADC Oneshot driver handle
-    adc_oneshot_unit_handle_t adc1_handle;
-    adc_oneshot_unit_init_cfg_t init_config1 = {
-        .unit_id = ADC_UNIT,
+    // Configure the GPIO as input with pull-up, interrupt on falling edge
+    gpio_config_t io_conf = {
+        .pin_bit_mask = 1ULL << INPUT_GPIO,
+        .mode = GPIO_MODE_INPUT,
+        .pull_up_en = GPIO_PULLUP_ENABLE,
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .intr_type = GPIO_INTR_NEGEDGE
     };
-
-    adc_oneshot_new_unit(&init_config1, &adc1_handle);
-
-
-    // Configure channel
-    adc_oneshot_chan_cfg_t config = {
-        .atten = ADC_ATTEN,
-        .bitwidth = ADC_BITWIDTH_DEFAULT, // default = 12-bit
-    };
-
-    adc_oneshot_config_channel(adc1_handle, ADC_CHANNEL, &config);
-
-    while (1) {
-        int adc_raw = 0;
-        adc_oneshot_read(adc1_handle, ADC_CHANNEL, &adc_raw);
-
-        // Convert raw value to voltage (approximate, no calibration)
-        float voltage = (adc_raw / 4095.0f) * (1.1f/0.25f);
-
-        printf("ADC Raw: %d, Voltage: %.3f V\n", adc_raw, voltage);
-        vTaskDelay(pdMS_TO_TICKS(1000));
-    }
+    gpio_config(&io_conf);
+    // Create a queue to handle GPIO events
+    gpio_evt_queue = xQueueCreate(10, sizeof(uint32_t));
+    // Start the task that will process GPIO events
+    xTaskCreate(gpio_task, "gpio_task", 2048, NULL, 10, NULL);
+    // Install GPIO ISR service
+    gpio_install_isr_service(0);
+    // Hook ISR handler for specific GPIO
+    gpio_isr_handler_add(INPUT_GPIO, gpio_isr_handler, (void*) INPUT_GPIO);
+    printf("Waiting for GPIO %d falling edge interrupts...", INPUT_GPIO);
 }

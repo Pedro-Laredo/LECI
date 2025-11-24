@@ -13,7 +13,7 @@ int main(void)
     { 
         printf ("\r%08u ", i);
         fflush (stdout);
-        usleep(500000);
+        usleep(5000000);
     }
     printf ("\n");
 
