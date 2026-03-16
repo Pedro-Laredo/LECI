@@ -1,0 +1,290 @@
+/* ── Reset ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  background: #1a1a2e;
+  color: #e0e0e0;
+}
+
+/* ── Canvas ── */
+#canvas3d {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ── Toolbar ── */
+#toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 270px;
+  height: 100vh;
+  overflow-y: auto;
+  background: rgba(18, 18, 32, 0.94);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 16px 12px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#toolbar h2 {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #7ec8e3;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+
+/* ── Fieldsets ── */
+fieldset {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 8px 10px 10px;
+}
+
+legend {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #888;
+  padding: 0 5px;
+}
+
+/* ── Buttons ── */
+button {
+  width: 100%;
+  padding: 7px 0;
+  margin-top: 5px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: #2b2b4a;
+  color: #bbb;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: #3d3d6b;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button.active {
+  background: #5a7ff0;
+  color: #fff;
+}
+
+.btn-row {
+  display: flex;
+  gap: 6px;
+}
+.btn-row button {
+  flex: 1;
+}
+
+.danger-btn {
+  background: #5a2020 !important;
+}
+.danger-btn:hover {
+  background: #8b3a3a !important;
+}
+
+.save-btn {
+  background: #1e4a2e !important;
+}
+.save-btn:hover {
+  background: #2e6a3e !important;
+}
+
+.load-btn {
+  background: #3a3020 !important;
+}
+.load-btn:hover {
+  background: #5a4a30 !important;
+}
+
+/* Small inline buttons (texture) */
+.small-btn {
+  width: auto !important;
+  padding: 3px 8px !important;
+  margin: 0 !important;
+  font-size: 0.72rem !important;
+  border-radius: 4px !important;
+}
+
+.danger-small {
+  background: #5a2020 !important;
+  width: auto !important;
+  padding: 3px 8px !important;
+  margin: 0 !important;
+  font-size: 0.72rem !important;
+  border-radius: 4px !important;
+}
+.danger-small:hover {
+  background: #8b3a3a !important;
+}
+
+.texture-label {
+  flex-wrap: wrap;
+}
+.texture-btns {
+  display: flex;
+  gap: 4px;
+}
+
+/* ── Inputs / Labels ── */
+#material-panel label,
+#light-panel label,
+fieldset label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 0.78rem;
+}
+
+input[type="color"] {
+  width: 36px;
+  height: 26px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: transparent;
+}
+
+input[type="range"] {
+  width: 100px;
+  accent-color: #5a7ff0;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #5a7ff0;
+}
+
+/* ── Object list ── */
+#object-list {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 0.78rem;
+}
+
+#object-list li {
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+#object-list li:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+#object-list li.selected {
+  background: rgba(90, 127, 240, 0.25);
+  color: #fff;
+}
+
+#object-list li .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+#object-list li .icon {
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+/* ── Scrollbar ── */
+#toolbar::-webkit-scrollbar,
+#object-list::-webkit-scrollbar {
+  width: 5px;
+}
+#toolbar::-webkit-scrollbar-thumb,
+#object-list::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.12);
+  border-radius: 4px;
+}
+#toolbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ── FPS Mode ── */
+.fps-btn {
+  background: #1a3a5a !important;
+  margin-top: 6px;
+}
+.fps-btn:hover {
+  background: #2a5a8a !important;
+}
+.fps-btn.active {
+  background: #e85d26 !important;
+  color: #fff;
+}
+
+#fps-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 200;
+}
+#fps-overlay.hidden {
+  display: none;
+}
+
+#fps-crosshair {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 0 4px rgba(0,0,0,0.8);
+  user-select: none;
+}
+
+#fps-hint {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.55);
+  color: rgba(255,255,255,0.8);
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  user-select: none;
+  backdrop-filter: blur(6px);
+}
+#fps-hint kbd {
+  background: rgba(255,255,255,0.15);
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-family: inherit;
+}
+
+body.fps-active #toolbar {
+  display: none;
+}

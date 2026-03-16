@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICG – 3D Scene Editor</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ───────── Toolbar ───────── -->
+  <div id="toolbar">
+    <h2>🎨 3D Scene Editor</h2>
+
+    <!-- Primitives -->
+    <fieldset>
+      <legend>Add Primitive</legend>
+      <div class="btn-row">
+        <button id="btn-box">◻ Box</button>
+        <button id="btn-sphere">● Sphere</button>
+      </div>
+      <div class="btn-row">
+        <button id="btn-cone">▲ Cone</button>
+        <button id="btn-torus">◎ Torus</button>
+      </div>
+      <div class="btn-row">
+        <button id="btn-cylinder">⬮ Cylinder</button>
+        <button id="btn-plane">▭ Plane</button>
+      </div>
+    </fieldset>
+
+    <!-- Add Lights -->
+    <fieldset>
+      <legend>Add Light</legend>
+      <div class="btn-row">
+        <button id="btn-pointlight">💡 Point</button>
+        <button id="btn-spotlight">🔦 Spot</button>
+      </div>
+      <div class="btn-row">
+        <button id="btn-dirlight">☀ Directional</button>
+      </div>
+    </fieldset>
+
+    <!-- Transform mode -->
+    <fieldset>
+      <legend>Transform Mode</legend>
+      <div class="btn-row">
+        <button id="btn-translate" class="active">↔ Move (W)</button>
+        <button id="btn-rotate">↻ Rot (E)</button>
+        <button id="btn-scale">⇲ Scl (R)</button>
+      </div>
+      <button id="btn-fps" class="fps-btn">🎮 First Person (F)</button>
+    </fieldset>
+
+    <!-- Material / Colour -->
+    <fieldset id="material-panel">
+      <legend>Material</legend>
+      <label>
+        Color
+        <input type="color" id="input-color" value="#44aa88" />
+      </label>
+      <label>
+        Metalness
+        <input type="range" id="input-metalness" min="0" max="1" step="0.01" value="0.3" />
+      </label>
+      <label>
+        Roughness
+        <input type="range" id="input-roughness" min="0" max="1" step="0.01" value="0.7" />
+      </label>
+      <label>
+        Opacity
+        <input type="range" id="input-opacity" min="0" max="1" step="0.01" value="1.0" />
+      </label>
+      <label>
+        Wireframe
+        <input type="checkbox" id="input-wireframe" />
+      </label>
+      <label class="texture-label">
+        Texture
+        <span class="texture-btns">
+          <button id="btn-load-texture" class="small-btn">📷 Load</button>
+          <button id="btn-remove-texture" class="small-btn danger-small">✕</button>
+        </span>
+        <input type="file" id="texture-input" accept="image/*" style="display:none" />
+      </label>
+      <label>
+        Tex Repeat X
+        <input type="range" id="input-tex-repeat-x" min="0.1" max="10" step="0.1" value="1" />
+      </label>
+      <label>
+        Tex Repeat Y
+        <input type="range" id="input-tex-repeat-y" min="0.1" max="10" step="0.1" value="1" />
+      </label>
+    </fieldset>
+
+    <!-- Light Properties (shown when a light is selected) -->
+    <fieldset id="light-panel" style="display:none">
+      <legend>Light Properties</legend>
+      <label>
+        Light Color
+        <input type="color" id="input-light-color" value="#ffffff" />
+      </label>
+      <label>
+        Intensity
+        <input type="range" id="input-light-intensity" min="0" max="50" step="0.1" value="5" />
+      </label>
+      <label>
+        Distance
+        <input type="range" id="input-light-distance" min="0" max="100" step="1" value="20" />
+      </label>
+      <label id="label-light-angle" style="display:none">
+        Angle (°)
+        <input type="range" id="input-light-angle" min="1" max="90" step="1" value="45" />
+      </label>
+      <label>
+        Cast Shadow
+        <input type="checkbox" id="input-light-shadow" checked />
+      </label>
+    </fieldset>
+
+    <!-- Environment -->
+    <fieldset>
+      <legend>Environment</legend>
+      <label>
+        Ambient Lighting
+        <input type="checkbox" id="input-ambient-lighting" checked />
+      </label>
+      <label>
+        Sun Intensity
+        <input type="range" id="input-sun-intensity" min="0" max="3" step="0.05" value="1.0" />
+      </label>
+      <label>
+        Fog Density
+        <input type="range" id="input-fog-density" min="0" max="0.06" step="0.001" value="0.015" />
+      </label>
+      <label>
+        Show Grid
+        <input type="checkbox" id="input-show-grid" checked />
+      </label>
+      <label>
+        Animate Trees
+        <input type="checkbox" id="input-animate-env" checked />
+      </label>
+    </fieldset>
+
+    <!-- Scene actions -->
+    <fieldset>
+      <legend>Scene</legend>
+      <button id="btn-delete" class="danger-btn">🗑 Delete Selected (Del)</button>
+      <div class="btn-row">
+        <button id="btn-save" class="save-btn">💾 Save</button>
+        <button id="btn-load" class="load-btn">📂 Load</button>
+      </div>
+      <input type="file" id="file-input" accept=".json" style="display:none" />
+    </fieldset>
+
+    <!-- Object list -->
+    <fieldset>
+      <legend>Scene Objects</legend>
+      <ul id="object-list"></ul>
+    </fieldset>
+  </div>
+
+  <!-- ───────── Canvas ───────── -->
+  <canvas id="canvas3d"></canvas>
+
+  <!-- FPS crosshair overlay -->
+  <div id="fps-overlay" class="hidden">
+    <div id="fps-crosshair">+</div>
+    <div id="fps-hint">Press <kbd>Esc</kbd> or <kbd>F</kbd> to exit first-person</div>
+  </div>
+
+  <!-- Three.js (ES‑module import‑map) -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

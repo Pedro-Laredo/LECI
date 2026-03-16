@@ -1,0 +1,11 @@
+GAS LISTING prog2.s 			page 1
+
+
+DEFINED SYMBOLS
+             prog2.s:1      *ABS*:0000000000000002 GETCHAR
+             prog2.s:2      *ABS*:0000000000000003 PUTCHAR
+             prog2.s:3      *ABS*:0000000000000006 PRINT_INT
+             prog2.s:8      .text:0000000000000000 main
+             prog2.s:11     .text:0000000000000004 do_loop
+
+NO UNDEFINED SYMBOLS
