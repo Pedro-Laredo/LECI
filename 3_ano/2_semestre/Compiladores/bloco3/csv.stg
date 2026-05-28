@@ -1,0 +1,11 @@
+tabela(headers, rows) ::= 
+\<table>
+  \<tr>
+    <headers:{h|\<th><h>\</th>}; separator="\n    ">
+  \</tr>
+  <rows:{r|
+  \<tr>
+    <r:{c|\<td><c>\</td>}; separator="\n    ">
+  \</tr>}>
+\</table>
+>>

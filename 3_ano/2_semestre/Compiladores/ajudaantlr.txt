@@ -1,0 +1,14 @@
+antlr4	compilação gramtáticas ANTRL4
+antlr4-test	depuração de gramáticas
+antlr4-clean	eliminacao dos ficheiros gerados pelo antlr4
+antlr4-main	geração da calsse main para a gramatca
+antlr4-visitor	geracao de uma classe visitor para a gramatica
+antlr4-listener	geracao de uma classe listener para a gramatica
+antlr4-build	compila gramaticas e o codigo java gerada
+antlr4-run	executa a classe *Main associada à gramatica
+antlr4-jar-run	executa um ficheiro jar (incluindo os jars do antlr)
+antlr4-javac 	compilador java(jar do antlr no CLASSPATH)
+antlr4-java	maquina virtual java (jar do antlr no CLASSPATH)
+java-clean	eliminacao dos ficheiros binarios java
+view-javadoc	abre a documentacao de uma classe java no browser
+st-groupfile2string	converte um STGroupFile num STGroupString

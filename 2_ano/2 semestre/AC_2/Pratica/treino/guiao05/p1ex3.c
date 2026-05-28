@@ -1,0 +1,50 @@
+#include <detpic32.h>
+void delay(unsigned int time){
+    resetCoreTimer();
+    while(readCoreTimer()<time);
+}
+void send2displays(unsigned char value)
+{
+    // Declaração do array com base no exercício anterior
+    static const char disp7Scodes[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71};
+    int dh, dl;
+    static char displayFalg= 0;
+    
+
+    
+    // Select display low (RD5=0, RD6=1 de acordo com a Fig 4)
+    if(displayFalg == 1){
+        LATDbits.LATD5 = 1;
+        LATDbits.LATD6 = 0;
+        dl = value & 0x0F;
+        LATB = (LATB & 0x80FF) | disp7Scodes[dl] <<8;
+
+    }
+    else{
+        LATDbits.LATD5 = 0;
+        LATDbits.LATD6 = 1;
+        dh = value >> 4;
+        LATB = (LATB & 0x80FF) | (disp7Scodes[dh]<<8);
+    }
+    displayFalg = !displayFalg;
+
+    
+}
+
+int main(void){
+    // configure RB0 to RB3 as inputs (1)
+    TRISB = TRISB | 0x000F;
+    
+    // configure RB8 to RB14 and RD5 to RD6 as outputs (0)
+    TRISB = TRISB & 0x80FF; 
+    TRISD = TRISD & 0xFF9F;
+
+    while(1){
+        send2displays(0x15);
+        delay(100000);
+    }
+
+
+    return 0;
+
+}

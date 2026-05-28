@@ -1,0 +1,17 @@
+GAS LISTING p2ex5.s 			page 1
+
+
+DEFINED SYMBOLS
+             p2ex5.s:1      *ABS*:000000000000bf88 ADDR_BASE_HI
+             p2ex5.s:2      *ABS*:0000000000006100 TRISE
+             p2ex5.s:3      *ABS*:0000000000006120 LATE
+             p2ex5.s:4      *ABS*:0000000000006040 TRISB
+             p2ex5.s:5      *ABS*:0000000000006050 PORTB
+             p2ex5.s:6      *ABS*:000000000000000b readCoreTimer
+             p2ex5.s:7      *ABS*:000000000000000c RESET_CORE_TIMER
+             p2ex5.s:11     .text:0000000000000000 main
+             p2ex5.s:22     .text:0000000000000020 while
+             p2ex5.s:32     .text:000000000000003c wait
+             p2ex5.s:43     .text:0000000000000070 end_counters
+
+NO UNDEFINED SYMBOLS

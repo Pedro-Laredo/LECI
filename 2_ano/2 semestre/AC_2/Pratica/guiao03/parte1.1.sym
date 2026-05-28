@@ -1,0 +1,13 @@
+GAS LISTING parte1.1.s 			page 1
+
+
+DEFINED SYMBOLS
+          parte1.1.s:1      *ABS*:000000000000bf88 BASE
+          parte1.1.s:2      *ABS*:0000000000006100 TRISE
+          parte1.1.s:3      *ABS*:0000000000006120 LATE
+          parte1.1.s:4      *ABS*:0000000000006040 TRISB
+          parte1.1.s:5      *ABS*:0000000000006050 PORTB
+          parte1.1.s:10     .text:0000000000000000 main
+          parte1.1.s:21     .text:000000000000001c loop
+
+NO UNDEFINED SYMBOLS
